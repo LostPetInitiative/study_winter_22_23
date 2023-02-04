@@ -49,7 +49,7 @@ After downloading these pretrained model, put them into "source" folder
 ### Train the first Yolov7 pet face detector
 The first yolov7 detects both 3 landmarks (two eyes and nose) and bboxes, for training the first yolov7 detector, download the pet_face_detection_dataset_1, and unzip in the path: './yolov7_bbox_landmarks/'
 
-Download the initial weights file: ![google drive](https://drive.google.com/file/d/1oIaGXFd4goyBvB1mYDK24GLof53H9ZYo/view), and place it in the path 'initial_weights/yolov7-face.pt'.
+Download the initial weights file: (https://drive.google.com/file/d/1oIaGXFd4goyBvB1mYDK24GLof53H9ZYo/view), and put it in the path 'initial_weights/yolov7-face.pt'.
 
  ```
 cd yolov7_bbox_landmarks  # the folder path
@@ -67,7 +67,9 @@ python test.py --data data/pet_test_kashtanka.yaml --kpt-label 3 --img 640 --bat
 ```
 
 ### Train the second Yolov7 pet face detector
-The second only detects the bboxes, for training the second yolov7 detector, download the pet_face_detection_dataset_2, and unzip in the path: './yolov7_bbox/data'
+The second only detects the bboxes, for training the second yolov7 detector, download the pet_face_detection_dataset_2, and unzip in the path: './yolov7_bbox/data'. And download the initial weights from (https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7x.pt), and put it into './yolov7_bbox/initial_weights/yolov7x.pt'
+
+
  ```
 cd yolov7_bbox  # the folder path
 python train.py --workers 1 --device 0 --batch-size 4 --epochs 30 --img 640 640 --data data/pet_face_train.yaml --hyp data/hyp.scratch.custom.yaml --cfg cfg/training/yolov7x_custom.yaml --name pet_face_detector2 --weights yolov7x.pt
