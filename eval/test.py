@@ -92,10 +92,10 @@ def get_embedding_dict(dog_path, net, model_name="resnet"):
 
 
 def load_csv(net):
-    df_lsf = pd.read_csv("cat_dog_class_csv/lsf2.csv")  # lsf2.csv
-    df_ll = pd.read_csv("cat_dog_class_csv/ll2.csv")  # ll2.csv
-    df_ff = pd.read_csv("cat_dog_class_csv/ff2.csv")  # ff2.csv
-    df_fsl = pd.read_csv("cat_dog_class_csv/fsl2.csv")  # fsl2.csv
+    df_lsf = pd.read_csv("../datasets/cat_dog_class_csv/lsf2.csv")  # lsf2.csv
+    df_ll = pd.read_csv("../datasets/cat_dog_class_csv/ll2.csv")  # ll2.csv
+    df_ff = pd.read_csv("../datasets/cat_dog_class_csv/ff2.csv")  # ff2.csv
+    df_fsl = pd.read_csv("../datasets/cat_dog_class_csv/fsl2.csv")  # fsl2.csv
     d_ff = get_embedding_dict("../datasets/Test/found", net)
     d_fsl = get_embedding_dict("../datasets/Test/synthetic_lost", net)
     d_ll = get_embedding_dict("../datasets/Test/lost", net)
