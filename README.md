@@ -32,7 +32,9 @@ ResNet100 Pretrained Model: (https://drive.google.com/u/0/uc?id=1-ITaMieQqLFgtYA
 Pet2023_BestBackbone Model:  (https://drive.google.com/u/8/uc?id=17IxKOmBRiKjbzkMw5IX59DQcMVyxnBwl&export=download)<br>
 Pet2023_BestHeader Model:  (https://drive.google.com/u/8/uc?id=1--YMiueKiduYO5Njp_sE3cHUTzqE2hrF&export=download)<br>
 
-After downloading these pretrained model, put them into "source" folder
+Put `ResNet100 Pretrained Model`, `Pet2023_BestBackbone Model`, `Pet2023_BestHeader Model` into `./source` folder,
+Put `First Yolov7 Model` into `./yolov7_bbox_landmarks/weights`,
+Put `Second Yolov7 Model` into `./yolov7_bbox/weights`,
 
 ## Train the new model
 Here are two pretrained backbone provided, after downloading these models and put them in the "source" folder
@@ -73,12 +75,12 @@ Download the kashtanka test alignment `test_alignmnet.zip` dataset and unzip it 
 ### Train the first Yolov7 pet face detector
 The first yolov7 detects both 3 landmarks (two eyes and nose) and bboxes, for training the first yolov7 detector, download the pet_face_detection_dataset_1, and unzip in the path: `./yolov7_bbox_landmarks/`
 
-Download the initial weights file: (https://drive.google.com/file/d/1oIaGXFd4goyBvB1mYDK24GLof53H9ZYo/view), and put it in the path `initial_weights/yolov7-face.pt`.
+Download the initial weights file: (https://drive.google.com/file/d/1oIaGXFd4goyBvB1mYDK24GLof53H9ZYo/view), and put it in the path `weights/yolov7-face.pt`.
 
  ```
 cd yolov7_bbox_landmarks  # the folder path
 pip3 install -r requirements.txt
-python train.py --data data/pet_train.yaml --cfg cfg/yolov7-face_3pt.yaml --weights initial_weights/yolov7-face.pt --batch-size 4 --epochs 300 --kpt-label 3 --img 640 --name pet_face_detector1 --hyp data/hyp.scratch.p6.yaml
+python train.py --data data/pet_train.yaml --cfg cfg/yolov7-face_3pt.yaml --weights weights/yolov7-face.pt --batch-size 4 --epochs 300 --kpt-label 3 --img 640 --name pet_face_detector1 --hyp data/hyp.scratch.p6.yaml
 ```
 
 After training, test the Yolov7 on test set:
@@ -92,7 +94,7 @@ python test.py --data data/pet_test_kashtanka.yaml --kpt-label 3 --img 640 --bat
 ```
 
 ### Train the second Yolov7 pet face detector
-The second only detects the bboxes, for training the second yolov7 detector, download the pet_face_detection_dataset_2, and unzip in the path: `./yolov7_bbox/data`. And download the initial weights from (https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7x.pt), and put it into `./yolov7_bbox/initial_weights/yolov7x.pt`
+The second only detects the bboxes, for training the second yolov7 detector, download the pet_face_detection_dataset_2, and unzip in the path: `./yolov7_bbox/data`. And download the initial weights from (https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7x.pt), and put it into `./yolov7_bbox/weights/yolov7x.pt`
 
 
  ```
