@@ -64,7 +64,7 @@ python train.py --exp_name exp1 --continue_train
 
 
 
-## Inference on the test set
+## Inference on the test set and submit to the Pet3Challenge
 
 ## Yolov7 Pet face detectors
 ### Train the first Yolov7 pet face detector
