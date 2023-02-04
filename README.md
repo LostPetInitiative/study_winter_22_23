@@ -13,6 +13,27 @@ conda activate pet2023
 cd pet2023  # the folder path
 pip3 install -r requirements.txt
 ```
+
+## Download the datasets
+List of the datasets:
+
+All3img_ExtraIG_train.zip (https://somelink)<br>
+All3img_ExtraIG_val.zip (https://somelink)<br>
+Kashtanka_test_alignment.zip (https://somelink)<br>
+Pet_face_detection_dataset1 (https://zenodo.org/record/7604865#.Y96vv3ZBxPY)<br>
+Pet_face_detection_dataset1<br>
+
+- cd Pet2023
+After downloading these zip file, unzip them into "datasets" folder
+
+## Download Pretrained model
+Yolo Model: (https://somelink)<br>
+ResNet100 Pretrained Model: (https://somelink)<br>
+Pet2023_BestBackbone Model:  (https://somelink)<br>
+Pet2023_BestHeader Model:  (https://somelink)<br>
+
+After downloading these pretrained model, put them into "source" folder
+
 ## Train the new model
 Here are two pretrained backbone provided, after downloading these models and put them in the "source" folder
 - ms1mv3_arcface_r100_fp16_backbone.pth  # providied by deepinsight
@@ -41,27 +62,11 @@ python train.py --exp_name exp1 --continue_train
 - header: header name, default:None
 - num_epoch: default:30
 
-## Download the datasets
-List of the datasets:
 
-All3img_ExtraIG_train.zip (https://somelink)<br>
-All3img_ExtraIG_val.zip (https://somelink)<br>
-Kashtanka_test_alignment.zip (https://somelink)<br>
-Pet_face_detection_dataset1 (https://zenodo.org/record/7604865#.Y96vv3ZBxPY)<br>
-Pet_face_detection_dataset1<br>
 
-- cd Pet2023
-After downloading these zip file, unzip them into "datasets" folder
+## Inference on the test set
 
-## Download Pretrained model
-Yolo Model: (https://somelink)<br>
-ResNet100 Pretrained Model: (https://somelink)<br>
-Pet2023_BestBackbone Model:  (https://somelink)<br>
-Pet2023_BestHeader Model:  (https://somelink)<br>
-
-After downloading these pretrained model, put them into "source" folder
-
-## Yolov7 Checkpoints and configs
+## Yolov7 Pet face detectors
 ### Train the first Yolov7 pet face detector
 The first yolov7 detects both 3 landmarks (two eyes and nose) and bboxes, for training the first yolov7 detector, download the pet_face_detection_dataset_1, and unzip in the path: './yolov7_bbox_landmarks/'
 
