@@ -9,7 +9,8 @@ import shutil
 import json
 import argparse
 from collections import defaultdict
-from tqdm.notebook import tqdm
+#from tqdm.notebook import tqdm
+from tqdm import tqdm
 import matplotlib.pyplot as plt
 from collections import OrderedDict
 from termcolor import cprint
