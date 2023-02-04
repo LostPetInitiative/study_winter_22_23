@@ -16,8 +16,8 @@ pip3 install -r requirements.txt
 ## Download the datasets
 List of the datasets:
 
-All3img_ExtraIG_train: ([https://somelink](https://zenodo.org/record/7606128#.Y97B4HZBxD8))<br>
-All3img_ExtraIG_val: ([https://somelink](https://zenodo.org/record/7606128#.Y97B4HZBxD8))<br>
+All3img_ExtraIG_train: (https://zenodo.org/record/7606128#.Y97B4HZBxD8)<br>
+All3img_ExtraIG_val: (https://zenodo.org/record/7606128#.Y97B4HZBxD8)<br>
 Kashtanka_test_alignment: (https://zenodo.org/record/7606149#.Y960CXZBxPY)<br>
 Pet_face_detection_dataset1: (https://zenodo.org/record/7604865#.Y96vv3ZBxPY)<br>
 Pet_face_detection_dataset2: ()<br>
