@@ -23,8 +23,8 @@ Kashtanka_test_alignment.zip (https://zenodo.org/record/7606149#.Y960CXZBxPY)<br
 Pet_face_detection_dataset1 (https://zenodo.org/record/7604865#.Y96vv3ZBxPY)<br>
 Pet_face_detection_dataset2 ()<br>
 
-- cd Pet2023
-After downloading these zip file, unzip them into "datasets" folder
+After downloading `All3img_ExtraIG_train.zip` and `All3img_ExtraIG_val.zip`, unzip them into "datasets" folder.
+
 
 ## Download Pretrained model
 Yolo Model: (https://somelink)<br>
@@ -68,9 +68,9 @@ python train.py --exp_name exp1 --continue_train
 
 ## Yolov7 Pet face detectors
 ### Train the first Yolov7 pet face detector
-The first yolov7 detects both 3 landmarks (two eyes and nose) and bboxes, for training the first yolov7 detector, download the pet_face_detection_dataset_1, and unzip in the path: './yolov7_bbox_landmarks/'
+The first yolov7 detects both 3 landmarks (two eyes and nose) and bboxes, for training the first yolov7 detector, download the pet_face_detection_dataset_1, and unzip in the path: `./yolov7_bbox_landmarks/`
 
-Download the initial weights file: (https://drive.google.com/file/d/1oIaGXFd4goyBvB1mYDK24GLof53H9ZYo/view), and put it in the path 'initial_weights/yolov7-face.pt'.
+Download the initial weights file: (https://drive.google.com/file/d/1oIaGXFd4goyBvB1mYDK24GLof53H9ZYo/view), and put it in the path `initial_weights/yolov7-face.pt`.
 
  ```
 cd yolov7_bbox_landmarks  # the folder path
@@ -89,7 +89,7 @@ python test.py --data data/pet_test_kashtanka.yaml --kpt-label 3 --img 640 --bat
 ```
 
 ### Train the second Yolov7 pet face detector
-The second only detects the bboxes, for training the second yolov7 detector, download the pet_face_detection_dataset_2, and unzip in the path: './yolov7_bbox/data'. And download the initial weights from (https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7x.pt), and put it into './yolov7_bbox/initial_weights/yolov7x.pt'
+The second only detects the bboxes, for training the second yolov7 detector, download the pet_face_detection_dataset_2, and unzip in the path: `./yolov7_bbox/data`. And download the initial weights from (https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7x.pt), and put it into `./yolov7_bbox/initial_weights/yolov7x.pt`
 
 
  ```
