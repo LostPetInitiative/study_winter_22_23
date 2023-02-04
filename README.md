@@ -177,8 +177,7 @@ python face_alignment.py --kpt-json exp_kpt.json --bbox-json exp_bbox.json --nam
 ```
 
 
-## Pet2023_BestModel Checkpoints and configs
-<b>Not finished</b>
+## Pet2023_BestModel Log and Test Result
 - Pet2023_BestModel Training Log
 ![alt text](https://github.com/LostPetInitiative/study_winter_22_23/blob/main/demo_image/Res_mag_All_Data_del2img_Extra2_replaced_train_log.png "Training")
 
