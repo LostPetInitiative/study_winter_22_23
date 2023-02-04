@@ -1,1 +1,1 @@
-put pretrained model here
+put pretrained model into this folder
