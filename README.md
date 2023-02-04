@@ -46,8 +46,9 @@ List of the datasets:
 
 All3img_ExtraIG_train.zip (https://somelink)<br>
 All3img_ExtraIG_val.zip (https://somelink)<br>
-Kashtanka_Dev_alignment.zip (https://somelink)<br>
-Kashtanka_Test_alignment.zip (https://somelink)<br>
+Kashtanka_test_alignment.zip (https://somelink)<br>
+Pet_face_detection_dataset1 (https://zenodo.org/record/7604865#.Y96vv3ZBxPY)<br>
+Pet_face_detection_dataset1<br>
 
 - cd Pet2023
 After downloading these zip file, unzip them into "datasets" folder
@@ -68,6 +69,7 @@ Download the initial weights file: (https://drive.google.com/file/d/1oIaGXFd4goy
 
  ```
 cd yolov7_bbox_landmarks  # the folder path
+pip3 install -r requirements.txt
 python train.py --data data/pet_train.yaml --cfg cfg/yolov7-face_3pt.yaml --weights initial_weights/yolov7-face.pt --batch-size 4 --epochs 300 --kpt-label 3 --img 640 --name pet_face_detector1 --hyp data/hyp.scratch.p6.yaml
 ```
 
@@ -87,6 +89,7 @@ The second only detects the bboxes, for training the second yolov7 detector, dow
 
  ```
 cd yolov7_bbox  # the folder path
+pip3 install -r requirements.txt
 python train.py --workers 1 --device 0 --batch-size 4 --epochs 30 --img 640 640 --data data/pet_face_train.yaml --hyp data/hyp.scratch.custom.yaml --cfg cfg/training/yolov7x_custom.yaml --name pet_face_detector2 --weights yolov7x.pt
 ```
 
@@ -115,7 +118,7 @@ python test.py --data data/kashtanka_test.yaml --img 640 --batch 4 --conf 0.05 -
 ### Pet face alignmnet
 The figure shows our two yolo detecters workflow:
 
-<b>Yolov7's workflow</b><br>
+<b>Workflow</b><br>
 ![alt text](https://github.com/LostPetInitiative/study_winter_22_23/blob/main/demo_image/yolo_flow.jpg "Yolov7's workflow")
 
 The --source directory can be folder of images:
