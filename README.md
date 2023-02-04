@@ -26,7 +26,7 @@ python train.py --exp_name exp1 --backbone ms1mv3_arcface_r100_fp16_backbone.pth
 ```
 
 if we want to continue the previous training, we should input --exp_name and --continue_train,<br>
-the default backbone is last_backbone.pth and last_header.pth
+the default backbone and header are last_backbone.pth and last_header.pth
 ## Continue the previous experiment
 ```
 cd pet2023/myrun  # the folder path
