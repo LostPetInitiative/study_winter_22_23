@@ -47,23 +47,40 @@ After downloading these pretrained model, put them into "source" folder
 
 ## Our Yolov7 Checkpoints and configs
 ### Train the first Yolov7 pet face detector
-The first yolov7 detects both 3 landmarks (two eyes and nose) and bboxes
+The first yolov7 detects both 3 landmarks (two eyes and nose) and bboxes, for training the first yolov7 detector, download the pet_face_detection_dataset_1, and unzip in the path: './yolov7_bbox_landmarks/'
 
 Download the initial weights file: ![google drive](https://drive.google.com/file/d/1oIaGXFd4goyBvB1mYDK24GLof53H9ZYo/view), and place it in the path 'initial_weights/yolov7-face.pt'.
 
  ```
 cd yolov7_bbox_landmarks  # the folder path
-python train.py --data data/pet_train.yaml --cfg cfg/yolov7-face_3pt.yaml --weights initial_weights/yolov7-face.pt --batch-size 4 --epochs 300 --kpt-label 3 --img 640 --name pet_face_detection --hyp data/hyp.scratch.p6.yaml
+python train.py --data data/pet_train.yaml --cfg cfg/yolov7-face_3pt.yaml --weights initial_weights/yolov7-face.pt --batch-size 4 --epochs 300 --kpt-label 3 --img 640 --name pet_face_detector1 --hyp data/hyp.scratch.p6.yaml
 ```
 
 After training, test the Yolov7 on test set:
 ```
-python test.py --data data/pet_test.yaml --kpt-label 3 --img 640 --batch 4 --conf 0.001 --iou 0.65 --device 0 --weights runs/train/pet_face_detection/weights/best.pt --name test
+python test.py --data data/pet_test.yaml --kpt-label 3 --img 640 --batch 4 --conf 0.001 --iou 0.65 --device 0 --weights runs/train/pet_face_detector1/weights/best.pt --name test
 ```
 
 In addition, I had also labeled 300 images from kashtanka dataset, test the Yolov7 on kashtanka test set:
 ```
-python test.py --data data/pet_test_kashtanka.yaml --kpt-label 3 --img 640 --batch 4 --conf 0.001 --iou 0.65 --device 0 --weights runs/train/pet_face_detection/weights/best.pt --name test_kashtanka
+python test.py --data data/pet_test_kashtanka.yaml --kpt-label 3 --img 640 --batch 4 --conf 0.001 --iou 0.65 --device 0 --weights runs/train/pet_face_detector1/weights/best.pt --name test_kashtanka
+```
+
+### Train the second Yolov7 pet face detector
+The second only detects the bboxes, for training the second yolov7 detector, download the pet_face_detection_dataset_2, and unzip in the path: './yolov7_bbox/data'
+ ```
+cd yolov7_bbox  # the folder path
+python train.py --workers 1 --device 0 --batch-size 4 --epochs 30 --img 640 640 --data data/pet_face_train.yaml --hyp data/hyp.scratch.custom.yaml --cfg cfg/training/yolov7x_custom.yaml --name pet_face_detector2 --weights yolov7x.pt
+```
+
+After training, test the Yolov7 on test set:
+```
+python test.py --data data/pet_face_test.yaml --img 640 --batch 4 --conf 0.05 --iou 0.5 --device 0 --weights runs/train/pet_face_detector2/weights/best.pt --name test
+```
+
+In addition, I had also labeled 300 images from kashtanka dataset, test the Yolov7 on kashtanka test set:
+```
+python test.py --data data/kashtanka_test.yaml --img 640 --batch 4 --conf 0.05 --iou 0.5 --device 0 --weights runs/train/pet_face_detector2/weights/best.pt --name kashtanka_test
 ```
 
 <b>Not finished</b>
