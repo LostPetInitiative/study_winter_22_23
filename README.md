@@ -88,8 +88,26 @@ python test.py --data data/kashtanka_test.yaml --img 640 --batch 4 --conf 0.05 -
 <b>Not finished</b>
 - yolo result
 
+### Pet face alignmnet
+The figure shows our two yolo detecters workflow:
+
 <b>Yolov7's workflow</b><br>
 ![alt text](https://github.com/LostPetInitiative/study_winter_22_23/blob/main/demo_image/yolo_flow.jpg "Yolov7's workflow")
+
+First run kpts_and_bboxes_inf.py, it will create a json file (exp_kpt.json), which stores the images path, the landmarks and the bboxes.
+```
+python kpts_and_bboxes_inf.py --source example_images --weights yolov7_bbox_landmarks/runs/train/pet_face_detector1/weights/best.pt --name exp
+```
+
+Similarly, run bboxes_inf.py, it will create an oter json file (exp_bbox.json), which stores the images path and the bboxes.
+```
+python bboxes_inf.py --source example_images --weights yolov7_bbox/runs/train/pet_face_detector2/weights/best.pt --name exp
+```
+
+Finally, pass those two json file to the face_alignment.py, it will process face alignment on images and save it in exp_face_alignment folder 
+```
+python face_alignment.py --kpt-json exp_kpt.json --bbox-json exp_bbox.json --name exp_face_alignment
+```
 
 
 ## Our Pet2023_BestModel Checkpoints and configs
