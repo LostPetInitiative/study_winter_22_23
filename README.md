@@ -26,11 +26,11 @@ After downloading `All3img_ExtraIG_train.zip` and `All3img_ExtraIG_val.zip`, unz
 
 
 ## Download Pretrained model
-First Yolov7 Model: (https://drive.google.com/u/6/uc?id=1MLjkpruH_VhACIz4Ow3oav0gS50uBPRE&export=download)<br>
-Second Yolov7 Model: (https://drive.google.com/u/6/uc?id=1NrnR4w-4Q4Nlw2hN-Ty4ZhTkT7J3EPWv&export=download)<br>
-ResNet100 Pretrained Model: (https://drive.google.com/u/0/uc?id=1-ITaMieQqLFgtYAmyQ8pIzpwaNDhE1Dt&export=download)<br>
-Pet2023_BestBackbone Model:  (https://drive.google.com/u/8/uc?id=17IxKOmBRiKjbzkMw5IX59DQcMVyxnBwl&export=download)<br>
-Pet2023_BestHeader Model:  (https://drive.google.com/u/8/uc?id=1--YMiueKiduYO5Njp_sE3cHUTzqE2hrF&export=download)<br>
+First Yolov7 Model:<br>(https://drive.google.com/u/6/uc?id=1MLjkpruH_VhACIz4Ow3oav0gS50uBPRE&export=download)<br>
+Second Yolov7 Model:<br>(https://drive.google.com/u/6/uc?id=1NrnR4w-4Q4Nlw2hN-Ty4ZhTkT7J3EPWv&export=download)<br>
+ResNet100 Pretrained Model:<br>(https://drive.google.com/u/0/uc?id=1-ITaMieQqLFgtYAmyQ8pIzpwaNDhE1Dt&export=download)<br>
+Pet2023_BestBackbone Model:<br>(https://drive.google.com/u/8/uc?id=17IxKOmBRiKjbzkMw5IX59DQcMVyxnBwl&export=download)<br>
+Pet2023_BestHeader Model:<br>(https://drive.google.com/u/8/uc?id=1--YMiueKiduYO5Njp_sE3cHUTzqE2hrF&export=download)<br>
 
 Put `ResNet100 Pretrained Model`, `Pet2023_BestBackbone Model`, `Pet2023_BestHeader Model` into `./source` folder,<br>
 Put `First Yolov7 Model` into `./yolov7_bbox_landmarks/weights`,<br>
