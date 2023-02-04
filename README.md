@@ -69,11 +69,26 @@ python train.py --exp_name exp1 --continue_train
 
 ## Inference on the test set and submit to the Pet3Challenge
 
-Download the kashtanka test set `Test.zip` dataset and unzip it to the path `datasets`,
-Test.zip includes two file
-- Test
-- cat_dog_class_csv
-
+Download the kashtanka test set `Test.zip` dataset and unzip it to the path `datasets`, Test.zip includes two folders
+```
+Test/
+├── found
+├── lost
+├── synthetic_found
+├── synthetic_lost
+...
+...
+cat_dog_class_csv/
+├── ff2.csv
+├── fsl2.csv
+├── ll2.csv
+├── lsf2.csv
+...
+Load the model and run the test.py, it will generate a submit.tsv file in eval
+```
+cd eval  # the folder path
+python test.py --backbone Res_mag_del2img_ExtraIG_replaced_backbone.pth
+```
 
 ## Yolov7 Pet face detectors
 ### Train the first Yolov7 pet face detector
