@@ -24,7 +24,7 @@ Pet_face_detection_dataset2: ()<br>
 
 After downloading `All3img_ExtraIG_train.zip` and `All3img_ExtraIG_val.zip`, unzip them into `datasets` folder. Those two dataset for training the pet face recognition model.<br>
 `Pet_face_detection_dataset1` unzip it into `./yolov7_bbox_landmarks/`, for training the first yolov7 detector. <br>
-`Pet_face_detection_dataset2` unzip it into `././yolov7_bbox/data/`, for training the second yolov7 detector.
+`Pet_face_detection_dataset2` unzip it into `./yolov7_bbox/data/`, for training the second yolov7 detector.
 
 ## Download Pretrained model
 First Yolov7 Model:<br>(https://drive.google.com/u/6/uc?id=1MLjkpruH_VhACIz4Ow3oav0gS50uBPRE&export=download)<br>
