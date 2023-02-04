@@ -10,7 +10,6 @@ conda activate pet2023
 ```
 ## Install requirements
 ```
-cd pet2023  # the folder path
 pip3 install -r requirements.txt
 ```
 
