@@ -46,11 +46,31 @@ Pet2023_BestHeader Model:  (https://somelink)<br>
 After downloading these pretrained model, put them into "source" folder
 
 ## Our Yolov7 Checkpoints and configs
+### Train the first Yolov7 pet face detector
+The first yolov7 detects both 3 landmarks (two eyes and nose) and bboxes
+
+Download the initial weights file: ![google drive](https://drive.google.com/file/d/1oIaGXFd4goyBvB1mYDK24GLof53H9ZYo/view), and place it in the path 'initial_weights/yolov7-face.pt'.
+
+ ```
+cd yolov7_bbox_landmarks  # the folder path
+python train.py --data data/pet_train.yaml --cfg cfg/yolov7-face_3pt.yaml --weights initial_weights/yolov7-face.pt --batch-size 4 --epochs 300 --kpt-label 3 --img 640 --name pet_face_detection --hyp data/hyp.scratch.p6.yaml
+```
+
+After training, test the Yolov7 on test set:
+```
+python test.py --data data/pet_test.yaml --kpt-label 3 --img 640 --batch 4 --conf 0.001 --iou 0.65 --device 0 --weights runs/train/pet_face_detection/weights/best.pt --name test
+```
+
+In addition, I had also labeled 300 images from kashtanka dataset, test the Yolov7 on kashtanka test set:
+```
+python test.py --data data/pet_test_kashtanka.yaml --kpt-label 3 --img 640 --batch 4 --conf 0.001 --iou 0.65 --device 0 --weights runs/train/pet_face_detection/weights/best.pt --name test_kashtanka
+```
+
 <b>Not finished</b>
 - yolo result
 
 <b>Yolov7's workflow</b><br>
-![alt text](https://github.com/LostPetInitiative/study_winter_22_23/blob/main/demo_image/yolo_workflow.jpg "Yolov7's workflow")
+![alt text](https://github.com/LostPetInitiative/study_winter_22_23/blob/main/demo_image/yolo_flow.jpg "Yolov7's workflow")
 
 
 ## Our Pet2023_BestModel Checkpoints and configs
