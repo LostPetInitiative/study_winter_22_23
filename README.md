@@ -124,6 +124,7 @@ example_images/
 ├── image1.jpg
 ├── image2.jpg
 ...
+```
 
 Or folder of folder of images:
 ```
