@@ -30,3 +30,12 @@ After downloading these pretrained model, put them into "source" folder
 <b>Not finished</b>
 - Pet2023_BestModel result
 
+## DataSets Description
+<b>Description</b>
+![alt text](https://github.com/LostPetInitiative/study_winter_22_23/blob/main/demo_image/DataSet.png "Description")
+
+<b>Examples of DataSets</>
+![alt text](https://github.com/LostPetInitiative/study_winter_22_23/blob/main/demo_image/examples_of_extraig.png "Examples of DataSets")
+
+<b>GRANDALA</b>
+![alt text](https://github.com/LostPetInitiative/study_winter_22_23/blob/main/demo_image/Res_mag_All_Data_del2img_Extra2_replaced_train_log.png "GRANDALA")
