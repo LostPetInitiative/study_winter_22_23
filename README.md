@@ -45,7 +45,7 @@ Pet2023_BestHeader Model:  (https://somelink)<br>
 
 After downloading these pretrained model, put them into "source" folder
 
-## Our Yolov7 Checkpoints and configs
+## Yolov7 Checkpoints and configs
 ### Train the first Yolov7 pet face detector
 The first yolov7 detects both 3 landmarks (two eyes and nose) and bboxes, for training the first yolov7 detector, download the pet_face_detection_dataset_1, and unzip in the path: './yolov7_bbox_landmarks/'
 
@@ -85,8 +85,17 @@ In addition, I had also labeled 300 images from kashtanka dataset, test the Yolo
 python test.py --data data/kashtanka_test.yaml --img 640 --batch 4 --conf 0.05 --iou 0.5 --device 0 --weights runs/train/pet_face_detector2/weights/best.pt --name kashtanka_test
 ```
 
-<b>Not finished</b>
-- yolo result
+<b>Result of first Yolov7 detectors </b>
+| Dataset | Precision | Recall | mAP@.5 | mAP@.5:.95 | 
+| ------- | ---------- | ---------- | ---------- | ---------- |
+| test set  | 0.925 | 0.95 | 0.926 | 0.724 |
+| kashtanka test | 0.959 | 0.913 | 0.972 | 0.584 | 
+
+<b>Result of second Yolov7 detectors </b>
+| Dataset | Precision | Recall | mAP@.5 | mAP@.5:.95 | 
+| ------- | ---------- | ---------- | ---------- | ---------- |
+| test set  | 0.901 | 0.902 | 0.833 | 0.629 |
+| kashtanka test | 0.977 | 0.997 | 0.994 | 0.671 | 
 
 ### Pet face alignmnet
 The figure shows our two yolo detecters workflow:
@@ -104,13 +113,13 @@ Similarly, run bboxes_inf.py, it will create an oter json file (exp_bbox.json), 
 python bboxes_inf.py --source example_images --weights yolov7_bbox/runs/train/pet_face_detector2/weights/best.pt --name exp
 ```
 
-Finally, pass those two json file to the face_alignment.py, it will process face alignment on images and save it in exp_face_alignment folder 
+Finally, pass those two json files to the face_alignment.py, it will process face alignment on images and save it in exp_face_alignment folder 
 ```
 python face_alignment.py --kpt-json exp_kpt.json --bbox-json exp_bbox.json --name exp_face_alignment
 ```
 
 
-## Our Pet2023_BestModel Checkpoints and configs
+## Pet2023_BestModel Checkpoints and configs
 <b>Not finished</b>
 - Pet2023_BestModel Training Log
 ![alt text](https://github.com/LostPetInitiative/study_winter_22_23/blob/main/demo_image/Res_mag_All_Data_del2img_Extra2_replaced_train_log.png "Training")
