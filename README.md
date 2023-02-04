@@ -19,9 +19,9 @@ List of the datasets:
 
 All3img_ExtraIG_train.zip (https://somelink)<br>
 All3img_ExtraIG_val.zip (https://somelink)<br>
-Kashtanka_test_alignment.zip (https://somelink)<br>
+Kashtanka_test_alignment.zip (https://zenodo.org/record/7606149#.Y960CXZBxPY)<br>
 Pet_face_detection_dataset1 (https://zenodo.org/record/7604865#.Y96vv3ZBxPY)<br>
-Pet_face_detection_dataset1<br>
+Pet_face_detection_dataset2 ()<br>
 
 - cd Pet2023
 After downloading these zip file, unzip them into "datasets" folder
