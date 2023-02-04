@@ -26,16 +26,24 @@ After downloading these pretrained model, put them into "source" folder
 <b>Not finished</b>
 - yolo result
 
+<b>Yolov7's workflow</b><br>
+![alt text](https://github.com/LostPetInitiative/study_winter_22_23/blob/main/demo_image/yolo_workflow.jpg "Yolov7's workflow")
+
+
 ## Our Pet2023_BestModel Checkpoints and configs
 <b>Not finished</b>
+- Pet2023_BestModel Training Log
+![alt text](https://github.com/LostPetInitiative/study_winter_22_23/blob/main/demo_image/Res_mag_All_Data_del2img_Extra2_replaced_train_log.png "Training")
+
 - Pet2023_BestModel result
+![alt text](https://github.com/LostPetInitiative/study_winter_22_23/blob/main/demo_image/res_mag_new_test.jpg "Pet2023_BestModel result")
 
 ## DataSets Description
-<b>Description</b>
+<b>Description</b><br>
 ![alt text](https://github.com/LostPetInitiative/study_winter_22_23/blob/main/demo_image/DataSet.png "Description")
 
-<b>Examples of DataSets</>
+<b>Examples of DataSets</b><br>
 ![alt text](https://github.com/LostPetInitiative/study_winter_22_23/blob/main/demo_image/examples_of_extraig.png "Examples of DataSets")
 
-<b>GRANDALA</b>
-![alt text](https://github.com/LostPetInitiative/study_winter_22_23/blob/main/demo_image/Res_mag_All_Data_del2img_Extra2_replaced_train_log.png "GRANDALA")
+
+
