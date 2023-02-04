@@ -66,6 +66,9 @@ python train.py --exp_name exp1 --continue_train
 
 ## Inference on the test set and submit to the Pet3Challenge
 
+Download the kashtanka test alignment `test_alignmnet.zip` dataset and unzip it to the path `datasets` first,
+
+
 ## Yolov7 Pet face detectors
 ### Train the first Yolov7 pet face detector
 The first yolov7 detects both 3 landmarks (two eyes and nose) and bboxes, for training the first yolov7 detector, download the pet_face_detection_dataset_1, and unzip in the path: `./yolov7_bbox_landmarks/`
