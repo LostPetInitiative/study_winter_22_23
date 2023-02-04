@@ -85,13 +85,13 @@ In addition, I had also labeled 300 images from kashtanka dataset, test the Yolo
 python test.py --data data/kashtanka_test.yaml --img 640 --batch 4 --conf 0.05 --iou 0.5 --device 0 --weights runs/train/pet_face_detector2/weights/best.pt --name kashtanka_test
 ```
 
-<b>Result of first Yolov7 detectors </b>
+<b>Result of the first Yolov7 detectors </b>
 | Dataset | Precision | Recall | mAP@.5 | mAP@.5:.95 | 
 | ------- | ---------- | ---------- | ---------- | ---------- |
 | test set  | 0.925 | 0.95 | 0.926 | 0.724 |
 | kashtanka test | 0.959 | 0.913 | 0.972 | 0.584 | 
 
-<b>Result of second Yolov7 detectors </b>
+<b>Result of the second Yolov7 detectors </b>
 | Dataset | Precision | Recall | mAP@.5 | mAP@.5:.95 | 
 | ------- | ---------- | ---------- | ---------- | ---------- |
 | test set  | 0.901 | 0.902 | 0.833 | 0.629 |
@@ -102,6 +102,34 @@ The figure shows our two yolo detecters workflow:
 
 <b>Yolov7's workflow</b><br>
 ![alt text](https://github.com/LostPetInitiative/study_winter_22_23/blob/main/demo_image/yolo_flow.jpg "Yolov7's workflow")
+
+The --source directory can be folder of images:
+```
+example_images/
+├── image1.jpg
+├── image2.jpg
+...
+
+Or folder of folder of images:
+```
+example_images/
+├── cat1
+│   ├── cat1_1.jpg
+│   ├── cat1_2.jpg
+│   ├── ...
+│   └── cat1_5.jpg
+├── dog1
+│   ├── dog1_1.jpg
+│   ├── dog1_2.jpg
+│   ├── ...
+│   └── dog1_5.jpg
+...
+└── cat10
+    ├── cat10_1.jpg
+    ├── cat10_2.jpg
+    ├── ...
+    └── cat10_5.jpg
+```
 
 First run kpts_and_bboxes_inf.py, it will create a json file (exp_kpt.json), which stores the images path, the landmarks and the bboxes.
 ```
