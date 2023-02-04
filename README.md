@@ -3,7 +3,7 @@ A repo for MDS student projects in winter 2022-2023
 
 # Pets-Face-Recognition
 
-## Create New Conda Env and install requirements
+## Create New Conda Env
 ```
 conda create --name pet2023 python=3.8
 conda activate pet2023
@@ -14,10 +14,25 @@ cd pet2023  # the folder path
 pip3 install -r requirements.txt
 ```
 ## Train the new model
+Here are two pretrained backbone provided, after downloading these models and put them in the "source" folder
+- ms1mv3_arcface_r100_fp16_backbone.pth  # providied by deepinsight
+- Res_mag_del2img_ExtraIG_replaced_backbone.pth  # the best backbone in this study
+- Res_mag_del2img_ExtraIG_replaced_header.pth  # the best header in this study
+
+if we train the model from the beginning, we should input --backbone ms1mv3_arcface_r100_fp16_backbone.pth
 ```
 cd pet2023/myrun  # the folder path
-python train.py --exp_name testing --train_data_path ../datasets/train --val_data_path ../datasets/val --continue_train --backbone last_backbone.pth --header last_header.pth --batch_size 16 --num_epoch 30
+python train.py --exp_name exp1 --backbone ms1mv3_arcface_r100_fp16_backbone.pth
 ```
+
+if we want to continue the previous training, we should input --exp_name and --continue_train,<br>
+the default backbone and header are last_backbone.pth and last_header.pth
+## Continue the previous experiment
+```
+cd pet2023/myrun  # the folder path
+python train.py --exp_name exp1 --continue_train
+```
+
 ### Optional Setting
 - train_data_path: change train path, default=train
 - val_data_path: change val path, default=val
