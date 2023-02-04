@@ -32,8 +32,8 @@ ResNet100 Pretrained Model: (https://drive.google.com/u/0/uc?id=1-ITaMieQqLFgtYA
 Pet2023_BestBackbone Model:  (https://drive.google.com/u/8/uc?id=17IxKOmBRiKjbzkMw5IX59DQcMVyxnBwl&export=download)<br>
 Pet2023_BestHeader Model:  (https://drive.google.com/u/8/uc?id=1--YMiueKiduYO5Njp_sE3cHUTzqE2hrF&export=download)<br>
 
-Put `ResNet100 Pretrained Model`, `Pet2023_BestBackbone Model`, `Pet2023_BestHeader Model` into `./source` folder,
-Put `First Yolov7 Model` into `./yolov7_bbox_landmarks/weights`,
+Put `ResNet100 Pretrained Model`, `Pet2023_BestBackbone Model`, `Pet2023_BestHeader Model` into `./source` folder,<br>
+Put `First Yolov7 Model` into `./yolov7_bbox_landmarks/weights`,<br>
 Put `Second Yolov7 Model` into `./yolov7_bbox/weights`,
 
 ## Train the new model
