@@ -16,14 +16,15 @@ pip3 install -r requirements.txt
 ## Download the datasets
 List of the datasets:
 
-All3img_ExtraIG_train.zip (https://somelink)<br>
-All3img_ExtraIG_val.zip (https://somelink)<br>
-Kashtanka_test_alignment.zip (https://zenodo.org/record/7606149#.Y960CXZBxPY)<br>
-Pet_face_detection_dataset1 (https://zenodo.org/record/7604865#.Y96vv3ZBxPY)<br>
-Pet_face_detection_dataset2 ()<br>
+All3img_ExtraIG_train: (https://somelink)<br>
+All3img_ExtraIG_val: (https://somelink)<br>
+Kashtanka_test_alignment: (https://zenodo.org/record/7606149#.Y960CXZBxPY)<br>
+Pet_face_detection_dataset1: (https://zenodo.org/record/7604865#.Y96vv3ZBxPY)<br>
+Pet_face_detection_dataset2: ()<br>
 
-After downloading `All3img_ExtraIG_train.zip` and `All3img_ExtraIG_val.zip`, unzip them into "datasets" folder.
-
+After downloading `All3img_ExtraIG_train.zip` and `All3img_ExtraIG_val.zip`, unzip them into `datasets` folder. Those two dataset for training the pet face recognition model.<br>
+`Pet_face_detection_dataset1` unzip it into `./yolov7_bbox_landmarks/`, for training the first yolov7 detectorm. <br>
+`Pet_face_detection_dataset2` unzip it into `././yolov7_bbox/data/`, for training the second yolov7 detectorm.
 
 ## Download Pretrained model
 First Yolov7 Model:<br>(https://drive.google.com/u/6/uc?id=1MLjkpruH_VhACIz4Ow3oav0gS50uBPRE&export=download)<br>
