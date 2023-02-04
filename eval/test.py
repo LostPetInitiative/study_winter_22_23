@@ -96,10 +96,10 @@ def load_csv(net):
     df_ll = pd.read_csv("cat_dog_class_csv/ll2.csv")  # ll2.csv
     df_ff = pd.read_csv("cat_dog_class_csv/ff2.csv")  # ff2.csv
     df_fsl = pd.read_csv("cat_dog_class_csv/fsl2.csv")  # fsl2.csv
-    d_ff = get_embedding_dict("./Test/found", net)
-    d_fsl = get_embedding_dict("./Test/synthetic_lost", net)
-    d_ll = get_embedding_dict("./Test/lost", net)
-    d_lsf = get_embedding_dict("./Test/synthetic_found", net)
+    d_ff = get_embedding_dict("../datasets/Test/found", net)
+    d_fsl = get_embedding_dict("../datasets/Test/synthetic_lost", net)
+    d_ll = get_embedding_dict("../datasets/Test/lost", net)
+    d_lsf = get_embedding_dict("../datasets/Test/synthetic_found", net)
     return df_lsf, df_ll, df_ff, df_fsl, d_ff, d_fsl, d_ll, d_lsf
 
 
