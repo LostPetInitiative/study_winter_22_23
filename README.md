@@ -3,7 +3,7 @@ A repo for MDS student projects in winter 2022-2023
 
 # Pets-Face-Recognition
 
-## Create New Conda Env and install requirements
+## Create New Conda Env
 ```
 conda create --name pet2023 python=3.8
 conda activate pet2023
@@ -16,8 +16,15 @@ pip3 install -r requirements.txt
 ## Train the new model
 ```
 cd pet2023/myrun  # the folder path
-python train.py --exp_name testing --train_data_path ../datasets/train --val_data_path ../datasets/val --continue_train --backbone last_backbone.pth --header last_header.pth --batch_size 16 --num_epoch 30
+python train.py --exp_name exp1 --backbone ms1mv3_arcface_r100_fp16_backbone.pth
 ```
+
+## Continue the previous experiment
+```
+cd pet2023/myrun  # the folder path
+python train.py --exp_name exp1 --continue_train
+```
+
 ### Optional Setting
 - train_data_path: change train path, default=train
 - val_data_path: change val path, default=val
