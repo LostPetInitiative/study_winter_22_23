@@ -32,7 +32,7 @@ Pet_face_detection_dataset2: <br>(https://zenodo.org/record/7606080#.Y98jXnZBxPY
 - `Pet_face_detection_dataset1.zip` unzip it into `./yolov7_bbox_landmarks/`, for training the first yolov7 detector. <br>
 - `Pet_face_detection_dataset2.zip` unzip it into `./yolov7_bbox/data/`, for training the second yolov7 detector.
 
-Or use auto down:
+Or use `download_datasets.py` to download datasets:
 ```
 python download_datasets.py
 ```
@@ -47,7 +47,7 @@ Second Yolov7 Model:<br>(https://drive.google.com/u/6/uc?id=1NrnR4w-4Q4Nlw2hN-Ty
 - Put the first Yolov7 Model `yolov7-pet-face.pt` into `./yolov7_bbox_landmarks/weights`,<br>
 - Put the second Yolov7 Model `yolov7x-pet-face.pt` into `./yolov7_bbox/weights`,
 
-Or use auto down:
+Or use `download_models.py` to download models:
 ```
 python download_models.py
 ```
