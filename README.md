@@ -38,7 +38,7 @@ Second Yolov7 Model:<br>(https://drive.google.com/u/6/uc?id=1NrnR4w-4Q4Nlw2hN-Ty
 - Put the second Yolov7 Model `yolov7x-pet-face.pt` into `./yolov7_bbox/weights`,
 
 ## Pet face recognition model training
-Here are two pretrained backbones are provided, after downloading those weights, put them into the "source" folder
+Here are two pretrained backbones are provided, after downloading those weights, put them into the `source` folder
 - ms1mv3_arcface_r100_fp16_backbone.pth <br>(https://drive.google.com/u/0/uc?id=1MHjiSy3Snvqptf0K71sr2IzXGjC4Lbcq&export=download providied by deepinsight)
 - Pet2023_BestBackbone.pth (the best backbone in this study, download link in the Download Pretrained model section)
 - Pet2023_BestHeader.pth (the best header in this study, download link in the Download Pretrained model section)
