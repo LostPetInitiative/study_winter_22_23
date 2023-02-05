@@ -22,9 +22,9 @@ pip3 install torch torchvision torchaudio --extra-index-url https://download.pyt
 ## Download the datasets
 List of the datasets:
 
-All3img_ExtraIG_train: <br>(https://zenodo.org/record/7606128#.Y97B4HZBxD8)<br>
-All3img_ExtraIG_val: <br>(https://zenodo.org/record/7606128#.Y97B4HZBxD8)<br>
-test_alignment.zip: <br>(https://zenodo.org/record/7606696#.Y983xnZBxPY)<br>
+All3img_ExtraIG_train: <br>(https://zenodo.org/record/7606233#.Y99yAnZBxD8)<br>
+All3img_ExtraIG_val: <br>(https://zenodo.org/record/7606233#.Y99yAnZBxD8)<br>
+test_alignment.zip: <br>(https://zenodo.org/record/7606233#.Y99yAnZBxD8)<br>
 Pet_face_detection_dataset1: <br>(https://zenodo.org/record/7604865#.Y96vv3ZBxPY)<br>
 Pet_face_detection_dataset2: <br>(https://zenodo.org/record/7606080#.Y98jXnZBxPY)<br>
 
@@ -33,9 +33,9 @@ Pet_face_detection_dataset2: <br>(https://zenodo.org/record/7606080#.Y98jXnZBxPY
 - `Pet_face_detection_dataset2.zip` unzip it into `./yolov7_bbox/data/`, for training the second yolov7 detector.
 
 ## Download Pretrained model
-ResNet100 Pretrained Model:<br>(https://drive.google.com/u/0/uc?id=1-ITaMieQqLFgtYAmyQ8pIzpwaNDhE1Dt&export=download)<br>
-Pet2023_BestBackbone Model:<br>(https://drive.google.com/u/8/uc?id=17IxKOmBRiKjbzkMw5IX59DQcMVyxnBwl&export=download)<br>
-Pet2023_BestHeader Model:<br>(https://drive.google.com/u/8/uc?id=1--YMiueKiduYO5Njp_sE3cHUTzqE2hrF&export=download)<br>
+ResNet100 Pretrained Model:<br>(https://zenodo.org/record/7606233#.Y99yAnZBxD8)<br>
+Pet2023_BestBackbone Model:<br>(https://zenodo.org/record/7606233#.Y99yAnZBxD8)<br>
+Pet2023_BestHeader Model:<br>(https://zenodo.org/record/7606233#.Y99yAnZBxD8)<br>
 First Yolov7 Model:<br>(https://drive.google.com/u/6/uc?id=1MLjkpruH_VhACIz4Ow3oav0gS50uBPRE&export=download)<br>
 Second Yolov7 Model:<br>(https://drive.google.com/u/6/uc?id=1NrnR4w-4Q4Nlw2hN-Ty4ZhTkT7J3EPWv&export=download)<br>
 
