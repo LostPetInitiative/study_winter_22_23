@@ -139,8 +139,8 @@ To reproduce our results, download our yolo model first, and then:
 - Put the first Yolov7 Model `yolov7-pet-face.pt` into `./yolov7_bbox_landmarks/weights`
 ```
 cd yolov7_bbox_landmarks
-python test.py --data data/pet_test.yaml --kpt-label 3 --img 640 --batch 4 --conf 0.001 --iou 0.65 --device 0 --weights yolov7_bbox_landmarks/weights/yolov7-pet-face.pt --name test
-python test.py --data data/pet_test_kashtanka.yaml --kpt-label 3 --img 640 --batch 4 --conf 0.001 --iou 0.65 --device 0 --weights yolov7_bbox_landmarks/weights/yolov7-pet-face.pt --name test_kashtanka
+python test.py --data data/pet_test.yaml --kpt-label 3 --img 640 --batch 4 --conf 0.001 --iou 0.65 --device 0 --weights weights/yolov7-pet-face.pt --name test
+python test.py --data data/pet_test_kashtanka.yaml --kpt-label 3 --img 640 --batch 4 --conf 0.001 --iou 0.65 --device 0 --weights weights/yolov7-pet-face.pt --name test_kashtanka
 ```
 
 
@@ -168,8 +168,8 @@ To reproduce our results, download our yolo model first, and then:
 - Put the second Yolov7 Model `yolov7x-pet-face.pt` into `./yolov7_bbox/weights`,
 ```
 cd yolov7_bbox
-python test.py --data data/pet_face_test.yaml --img 640 --batch 4 --conf 0.05 --iou 0.5 --device 0 --weights yolov7_bbox/weights/yolov7x-pet-face.pt --name test
-python test.py --data data/kashtanka_test.yaml --img 640 --batch 4 --conf 0.05 --iou 0.5 --device 0 --weights yolov7_bbox/weights/yolov7x-pet-face.pt --name kashtanka_test
+python test.py --data data/pet_face_test.yaml --img 640 --batch 4 --conf 0.05 --iou 0.5 --device 0 --weights weights/yolov7x-pet-face.pt --name test
+python test.py --data data/kashtanka_test.yaml --img 640 --batch 4 --conf 0.05 --iou 0.5 --device 0 --weights weights/yolov7x-pet-face.pt --name kashtanka_test
 ```
 
 <b>Result of the first Yolov7 detectors </b>
