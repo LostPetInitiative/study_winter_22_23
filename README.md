@@ -40,8 +40,8 @@ Second Yolov7 Model:<br>(https://drive.google.com/u/6/uc?id=1NrnR4w-4Q4Nlw2hN-Ty
 ## Train the new model
 Here are two pretrained backbone provided, after downloading these models and put them in the "source" folder
 - ms1mv3_arcface_r100_fp16_backbone.pth <br>(https://drive.google.com/u/0/uc?id=1MHjiSy3Snvqptf0K71sr2IzXGjC4Lbcq&export=download providied by deepinsight)
-- Pet2023_BestBackbone.pth (the best backbone in this study, download in the Download Pretrained model section)
-- Pet2023_BestHeader.pth (the best header in this study, download in the Download Pretrained model section)
+- Pet2023_BestBackbone.pth (the best backbone in this study, download link in the Download Pretrained model section)
+- Pet2023_BestHeader.pth (the best header in this study, download link in the Download Pretrained model section)
 
 Train the model from the srcatch, use the `ms1mv3_arcface_r100_fp16_backbone.pth` backbone as pre-trained model, and input --backbone ms1mv3_arcface_r100_fp16_backbone.pth
 ```
