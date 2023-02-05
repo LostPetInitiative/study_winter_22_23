@@ -84,6 +84,7 @@ cat_dog_class_csv/
 ├── ll2.csv
 ├── lsf2.csv
 ...
+```
 Load the model and run the test.py, it will generate a submit.tsv file in eval
 ```
 cd eval  # the folder path
