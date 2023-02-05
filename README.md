@@ -37,27 +37,27 @@ Put `ResNet100 Pretrained Model`, `Pet2023_BestBackbone Model`, `Pet2023_BestHea
 Put `First Yolov7 Model` into `./yolov7_bbox_landmarks/weights`,<br>
 Put `Second Yolov7 Model` into `./yolov7_bbox/weights`,
 
-## Model training
-Here are two pretrained backbones are provided, put them into the "source" folder
+## Train the new model
+Here are two pretrained backbone provided, after downloading these models and put them in the "source" folder
 - ms1mv3_arcface_r100_fp16_backbone.pth (https://drive.google.com/u/0/uc?id=1MHjiSy3Snvqptf0K71sr2IzXGjC4Lbcq&export=download providied by deepinsight)
 - Pet2023_BestBackbone.pth (the best backbone in this study, download in the Download Pretrained model section)
 - Pet2023_BestHeader.pth (the best header in this study, download in the Download Pretrained model section)
 
-Train model from scratch, use ms1mv3_arcface_r100_fp16_backbone.pth as the initial weight --backbone ms1mv3_arcface_r100_fp16_backbone.pth
+if we train the model from the beginning, we should input --backbone ms1mv3_arcface_r100_fp16_backbone.pth
 ```
-cd myrun  # the folder path
+cd pet2023/myrun  # the folder path
 python train.py --exp_name exp1 --backbone ms1mv3_arcface_r100_fp16_backbone.pth
 ```
 
-Continue the previous training, input --exp_name and --continue_train,<br>
+if we want to continue the previous training, we should input --exp_name and --continue_train,<br>
 the default backbone and header are last_backbone.pth and last_header.pth
 ## Continue train the previous experiment
 ```
-cd myrun  # the folder path
+cd pet2023/myrun  # the folder path
 python train.py --exp_name exp1 --continue_train
 ```
 
-### Optional setting
+### Optional Setting
 - train_data_path: change train path, default=train
 - val_data_path: change val path, default=val
 - continue_train: default=False
