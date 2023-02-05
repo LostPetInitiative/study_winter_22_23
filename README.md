@@ -34,7 +34,7 @@ First Yolov7 Model:<br>(https://drive.google.com/u/6/uc?id=1MLjkpruH_VhACIz4Ow3o
 Second Yolov7 Model:<br>(https://drive.google.com/u/6/uc?id=1NrnR4w-4Q4Nlw2hN-Ty4ZhTkT7J3EPWv&export=download)<br>
 
 - Put `res_mag_All_Data_del2img_Extra2_replaced_best.pth`, `Pet2023_BestBackbone.pth`, `Pet2023_BestHeader.pth` into `./source` folder,<br>
-= Put the first Yolov7 Model `yolov7-pet-face.pt` into `./yolov7_bbox_landmarks/weights`,<br>
+- Put the first Yolov7 Model `yolov7-pet-face.pt` into `./yolov7_bbox_landmarks/weights`,<br>
 - Put the second Yolov7 Model `yolov7x-pet-face.pt` into `./yolov7_bbox/weights`,
 
 ## Pet face recognition model training
