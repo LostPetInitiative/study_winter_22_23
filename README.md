@@ -165,7 +165,7 @@ example_images/
 ...
 ```
 
-Or folder of folder of images:
+Or something like folder of folder of images:
 ```
 example_images/
 ├── cat1
