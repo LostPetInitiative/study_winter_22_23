@@ -13,6 +13,12 @@ conda activate pet2023
 pip3 install -r requirements.txt
 ```
 
+For using pytorch gpu, please refers to: https://pytorch.org/get-started/locally/
+
+```
+pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
+```
+
 ## Download the datasets
 List of the datasets:
 
