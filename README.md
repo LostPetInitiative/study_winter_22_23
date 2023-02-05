@@ -32,6 +32,11 @@ Pet_face_detection_dataset2: <br>(https://zenodo.org/record/7606080#.Y98jXnZBxPY
 - `Pet_face_detection_dataset1.zip` unzip it into `./yolov7_bbox_landmarks/`, for training the first yolov7 detector. <br>
 - `Pet_face_detection_dataset2.zip` unzip it into `./yolov7_bbox/data/`, for training the second yolov7 detector.
 
+Or use auto down:
+```
+python download_datasets.py
+```
+
 ## Download Pretrained model
 Pet2023_BestBackbone Model:<br>(https://zenodo.org/record/7606128#.Y97B4HZBxD8)<br>
 Pet2023_BestHeader Model:<br>(https://zenodo.org/record/7606128#.Y97B4HZBxD8)<br>
@@ -41,6 +46,11 @@ Second Yolov7 Model:<br>(https://drive.google.com/u/6/uc?id=1NrnR4w-4Q4Nlw2hN-Ty
 - Put `Res_mag_del2img_ExtraIG_replaced_backbone.pth`, `Res_mag_del2img_ExtraIG_replaced_header.pth` into `./source` folder,<br>
 - Put the first Yolov7 Model `yolov7-pet-face.pt` into `./yolov7_bbox_landmarks/weights`,<br>
 - Put the second Yolov7 Model `yolov7x-pet-face.pt` into `./yolov7_bbox/weights`,
+
+Or use auto down:
+```
+python download_models.py
+```
 
 ## Pet face recognition model training
 Here are two pretrained backbones are provided, after downloading those weights, put them into the `source` folder
