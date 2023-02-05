@@ -217,7 +217,6 @@ python face_alignment.py --kpt-json exp_kpt.json --bbox-json exp_bbox.json --nam
 ![alt text](https://github.com/LostPetInitiative/study_winter_22_23/blob/main/demo_image/res_mag_new_test.jpg "Pet2023_BestModel result")
 
 ## DataSets Description
-<b>Description</b><br>
 ![alt text](https://github.com/LostPetInitiative/study_winter_22_23/blob/main/demo_image/DataSet.png "Description")
 
 ## Examples of DataSets
