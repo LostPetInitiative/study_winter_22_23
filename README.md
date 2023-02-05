@@ -40,8 +40,8 @@ python download_datasets.py
 ## Download Pretrained model
 Pet2023_BestBackbone Model:<br>(https://zenodo.org/record/7606128#.Y97B4HZBxD8)<br>
 Pet2023_BestHeader Model:<br>(https://zenodo.org/record/7606128#.Y97B4HZBxD8)<br>
-First Yolov7 Model:<br>(https://drive.google.com/u/6/uc?id=1MLjkpruH_VhACIz4Ow3oav0gS50uBPRE&export=download)<br>
-Second Yolov7 Model:<br>(https://drive.google.com/u/6/uc?id=1NrnR4w-4Q4Nlw2hN-Ty4ZhTkT7J3EPWv&export=download)<br>
+First Yolov7 Model:<br>(https://zenodo.org/record/7607110#.Y9-EAXZBxPZ)<br>
+Second Yolov7 Model:<br>(https://zenodo.org/record/7607110#.Y9-EAXZBxPZ)<br>
 
 - Put `Res_mag_del2img_ExtraIG_replaced_backbone.pth`, `Res_mag_del2img_ExtraIG_replaced_header.pth` into `./source` folder,<br>
 - Put the first Yolov7 Model `yolov7-pet-face.pt` into `./yolov7_bbox_landmarks/weights`,<br>
@@ -117,7 +117,7 @@ python compai__lostpets_v3_1.py sumbit sumbit.tsv
 ### Train the first Yolov7 pet face detector
 The first yolov7 detects both 3 landmarks (two eyes and nose) and bboxes, for training the first yolov7 detector, download the `pet_face_detection_dataset_1`, and unzip in the path: `./yolov7_bbox_landmarks/`
 
-Download the initial weights file: (https://drive.google.com/file/d/1oIaGXFd4goyBvB1mYDK24GLof53H9ZYo/view), and put it in the path `weights/yolov7-face.pt`.
+Download the initial weights file: (https://zenodo.org/record/7607110#.Y9-EAXZBxPZ), and put it in the path `weights/yolov7-face.pt`.
 
  ```
 cd yolov7_bbox_landmarks
