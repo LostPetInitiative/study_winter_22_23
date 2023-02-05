@@ -19,8 +19,6 @@ if __name__ == "__main__":
     if not os.path.exists("./datasets/Test"):
         url = 'https://zenodo.org/record/7606233/files/test_alignment.zip?download=1'
         download_and_extract_archive(url, download_root=str("./datasets"),filename=f'test.zip')
-        shutil.move("./datasets/test_alignment/Test", "./datasets/Test")
-        shutil.move("./datasets/test_alignment/cat_dog_class_csv", "./datasets/cat_dog_class_csv")
     else:
         print("Test already exists in ./datasets/Test")
 
