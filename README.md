@@ -22,9 +22,9 @@ pip3 install torch torchvision torchaudio --extra-index-url https://download.pyt
 ## Download the datasets
 List of the datasets:
 
-All3img_ExtraIG_train: <br>(https://zenodo.org/record/7606128#.Y97B4HZBxD8)<br>
-All3img_ExtraIG_val: <br>(https://zenodo.org/record/7606128#.Y97B4HZBxD8)<br>
-test_alignment.zip: <br>(https://zenodo.org/record/7606233#.Y99yAnZBxD8))<br>
+All3img_ExtraIG_train: <br>(https://zenodo.org/record/7606233#.Y9-GNHZBxD8)<br>
+All3img_ExtraIG_val: <br>(https://zenodo.org/record/7606233#.Y9-GNHZBxD8)<br>
+test_alignment.zip: <br>(https://zenodo.org/record/7606233#.Y9-GNHZBxD8))<br>
 Pet_face_detection_dataset1: <br>(https://zenodo.org/record/7604865#.Y96vv3ZBxPY)<br>
 Pet_face_detection_dataset2: <br>(https://zenodo.org/record/7606080#.Y98jXnZBxPY)<br>
 
@@ -38,8 +38,8 @@ python download_datasets.py
 ```
 
 ## Download Pretrained model
-Pet2023_BestBackbone Model:<br>(https://zenodo.org/record/7606128#.Y97B4HZBxD8)<br>
-Pet2023_BestHeader Model:<br>(https://zenodo.org/record/7606128#.Y97B4HZBxD8)<br>
+Pet2023_BestBackbone Model:<br>(https://zenodo.org/record/7606233#.Y9-GNHZBxD8)<br>
+Pet2023_BestHeader Model:<br>(https://zenodo.org/record/7606233#.Y9-GNHZBxD8)<br>
 First Yolov7 Model:<br>(https://zenodo.org/record/7607110#.Y9-EAXZBxPZ)<br>
 Second Yolov7 Model:<br>(https://zenodo.org/record/7607110#.Y9-EAXZBxPZ)<br>
 
