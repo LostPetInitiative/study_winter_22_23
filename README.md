@@ -220,11 +220,13 @@ example_images/
 ```
 
 First run kpts_and_bboxes_inf.py, it will create a json file (exp_kpt.json), which stores the images path, folder name, the landmarks, the bboxes and the conf.
+or you can use our pre-trained model, `--weights yolov7_bbox_landmarks/weights/yolov7-pet-face.pt`
 ```
 python kpts_and_bboxes_inf.py --source example_images --weights yolov7_bbox_landmarks/runs/train/pet_face_detector1/weights/best.pt --name exp
 ```
 
-Similarly, run bboxes_inf.py, it will create an other json file (exp_bbox.json), which stores the images path, folder name, the bboxes and the conf.
+Similarly, run bboxes_inf.py, it will create an other json file (exp_bbox.json), which stores the images path, folder name, the bboxes and the conf. 
+or you can use our pre-trained model, `--weights yolov7_bbox/weights/yolov7x-pet-face.pt`
 ```
 python bboxes_inf.py --source example_images --weights yolov7_bbox/runs/train/pet_face_detector2/weights/best.pt --name exp
 ```
