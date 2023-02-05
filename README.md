@@ -65,6 +65,7 @@ python train.py --exp_name exp1 --continue_train
 - backbone: backbone name, default=None
 - header: header name, default=None
 - num_epoch: default=30
+- batch_size: default=16
 
 ## Inference on the test set and submit to the Pet3Challenge
 
