@@ -17,6 +17,13 @@ if __name__ == "__main__":
         download_url(url, "./source", 'Res_mag_del2img_ExtraIG_replaced_header.pth')
     else:
         print("Res_mag_del2img_ExtraIG_replaced_header.pth already exists ./source")
+    
+    if not os.path.exists("./source/ms1mv3_arcface_r100_fp16_backbone.pth"):
+        print("Download ms1mv3_arcface_r100_fp16_backbone.pth to ./source")
+        url = 'https://zenodo.org/record/7606128/files/ms1mv3_arcface_r100_fp16_backbone.pth?download=1'
+        download_url(url, "./source", 'ms1mv3_arcface_r100_fp16_backbone.pth')
+    else:
+        print("Res_mag_del2img_ExtraIG_replaced_header.pth already exists ./source")
 
     if not os.path.exists("./yolov7_bbox_landmarks/weights/yolov7-pet-face.pt"):
         print("Download yolov7-pet-face.pt to ./yolov7_bbox_landmarks/weights")
