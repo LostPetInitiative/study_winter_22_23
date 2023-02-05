@@ -59,8 +59,8 @@ python train.py --exp_name exp1 --continue_train
 ```
 
 ### Optional Setting
-- train_data_path: change train path, default=train
-- val_data_path: change val path, default=val
+- train_data_path: change train path, default="../datasets/All3img_ExtraIG_train"
+- val_data_path: change val path, default="../datasets/All3img_ExtraIG_val"
 - continue_train: default=False
 - backbone: backbone name, default=None
 - header: header name, default=None
