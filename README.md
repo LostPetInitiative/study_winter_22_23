@@ -129,7 +129,7 @@ pip3 install -r requirements.txt
 python train.py --workers 1 --device 0 --batch-size 4 --epochs 30 --img 640 640 --data data/pet_face_train.yaml --hyp data/hyp.scratch.custom.yaml --cfg cfg/training/yolov7x_custom.yaml --name pet_face_detector2 --weights yolov7x.pt
 ```
 
-After training, test the Yolov7 on test set(split from the pet_face_detection_dataset_2):
+Test the Yolov7 on test set(split from the pet_face_detection_dataset_2):
 ```
 python test.py --data data/pet_face_test.yaml --img 640 --batch 4 --conf 0.05 --iou 0.5 --device 0 --weights runs/train/pet_face_detector2/weights/best.pt --name test
 ```
@@ -186,12 +186,12 @@ example_images/
     └── cat10_5.jpg
 ```
 
-First run kpts_and_bboxes_inf.py, it will create a json file (exp_kpt.json), which stores the images path, the landmarks and the bboxes.
+First run kpts_and_bboxes_inf.py, it will create a json file (exp_kpt.json), which stores the images path, folder name, the landmarks, the bboxes and the conf.
 ```
 python kpts_and_bboxes_inf.py --source example_images --weights yolov7_bbox_landmarks/runs/train/pet_face_detector1/weights/best.pt --name exp
 ```
 
-Similarly, run bboxes_inf.py, it will create an oter json file (exp_bbox.json), which stores the images path and the bboxes.
+Similarly, run bboxes_inf.py, it will create an other json file (exp_bbox.json), which stores the images path, folder name, the bboxes and the conf.
 ```
 python bboxes_inf.py --source example_images --weights yolov7_bbox/runs/train/pet_face_detector2/weights/best.pt --name exp
 ```
