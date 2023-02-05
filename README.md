@@ -18,11 +18,11 @@ List of the datasets:
 
 All3img_ExtraIG_train: <br>(https://zenodo.org/record/7606128#.Y97B4HZBxD8)<br>
 All3img_ExtraIG_val: <br>(https://zenodo.org/record/7606128#.Y97B4HZBxD8)<br>
-Kashtanka_test_alignment: <br>(https://zenodo.org/record/7606696#.Y983xnZBxPY)<br>
+test_alignment.zip: <br>(https://zenodo.org/record/7606696#.Y983xnZBxPY)<br>
 Pet_face_detection_dataset1: <br>(https://zenodo.org/record/7604865#.Y96vv3ZBxPY)<br>
 Pet_face_detection_dataset2: <br>(https://zenodo.org/record/7606080#.Y98jXnZBxPY)<br>
 
-- After downloading `All3img_ExtraIG_train.zip` and `All3img_ExtraIG_val.zip`, unzip them into `datasets` folder. Those two dataset for training the pet face recognition model.<br>
+- After downloading `All3img_ExtraIG_train.zip`, `All3img_ExtraIG_val.zip`, and `test_alignment.zip` unzip them into `datasets` folder. Those two dataset for training the pet face recognition model.<br>
 - `Pet_face_detection_dataset1.zip` unzip it into `./yolov7_bbox_landmarks/`, for training the first yolov7 detector. <br>
 - `Pet_face_detection_dataset2.zip` unzip it into `./yolov7_bbox/data/`, for training the second yolov7 detector.
 
