@@ -61,15 +61,16 @@ python train.py --exp_name exp1 --continue_train
 - train_data_path: change train path, default=train
 - val_data_path: change val path, default=val
 - continue_train: default=False
-- backbone: backbone name, default:None
-- header: header name, default:None
-- num_epoch: default:30
+- backbone: backbone name, default=None
+- header: header name, default=None
+- num_epoch: default=30
 
 
 
 ## Inference on the test set and submit to the Pet3Challenge
 
-Download the kashtanka test set `Test.zip` dataset and unzip it to the path `datasets`, Test.zip includes two folders
+Download the kashtanka test set `Test.zip` dataset and unzip it to the path `datasets`, Test.zip includes two main folders `Test` and `cat_dot_class_csv`, in this part we use the filtering by pet type matching, using the pet type to filter out some irrelevant answers. For example, if the query is finding a dog, we filter out all the cat answers.
+
 ```
 Test/
 ├── found
@@ -85,10 +86,16 @@ cat_dog_class_csv/
 ├── lsf2.csv
 ...
 ```
-Load the model and run the test.py, it will generate a submit.tsv file in eval
+
+Load the model and run the test.py, and pass the backbone to the test.py, the backbone will be found in `source` folder, and the `test.py` will generate a `submit.tsv` file in eval.
 ```
 cd eval  # the folder path
 python test.py --backbone Res_mag_del2img_ExtraIG_replaced_backbone.pth
+```
+
+After generating the `submit.tsv`, register on (http://92.63.96.33/c/_lostpets_v3_1/description), download the `compai__lostpets_v3_1.py`, put it into the `eval` folder
+```
+python compai__lostpets_v3_1.py sumbit sumbit.tsv
 ```
 
 ## Yolov7 Pet face detectors
