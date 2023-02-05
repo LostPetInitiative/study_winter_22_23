@@ -49,9 +49,10 @@ cd pet2023/myrun  # the folder path
 python train.py --exp_name exp1 --backbone ms1mv3_arcface_r100_fp16_backbone.pth
 ```
 
+## Continue train the previous experiment
 For continue the previous training, input --exp_name and --continue_train,<br>
 the default backbone and header are `last_backbone.pth` and `last_header.pth`
-## Continue train the previous experiment
+
 ```
 cd pet2023/myrun  # the folder path
 python train.py --exp_name exp1 --continue_train
@@ -64,8 +65,6 @@ python train.py --exp_name exp1 --continue_train
 - backbone: backbone name, default=None
 - header: header name, default=None
 - num_epoch: default=30
-
-
 
 ## Inference on the test set and submit to the Pet3Challenge
 
