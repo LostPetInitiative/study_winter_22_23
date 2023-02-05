@@ -23,8 +23,8 @@ Pet_face_detection_dataset1: (https://zenodo.org/record/7604865#.Y96vv3ZBxPY)<br
 Pet_face_detection_dataset2: (https://zenodo.org/record/7606080#.Y98jXnZBxPY)<br>
 
 After downloading `All3img_ExtraIG_train.zip` and `All3img_ExtraIG_val.zip`, unzip them into `datasets` folder. Those two dataset for training the pet face recognition model.<br>
-`Pet_face_detection_dataset1` unzip it into `./yolov7_bbox_landmarks/`, for training the first yolov7 detector. <br>
-`Pet_face_detection_dataset2` unzip it into `./yolov7_bbox/data/`, for training the second yolov7 detector.
+`Pet_face_detection_dataset1.zip` unzip it into `./yolov7_bbox_landmarks/`, for training the first yolov7 detector. <br>
+`Pet_face_detection_dataset2.zip` unzip it into `./yolov7_bbox/data/`, for training the second yolov7 detector.
 
 ## Download Pretrained model
 First Yolov7 Model:<br>(https://drive.google.com/u/6/uc?id=1MLjkpruH_VhACIz4Ow3oav0gS50uBPRE&export=download)<br>
@@ -33,13 +33,13 @@ ResNet100 Pretrained Model:<br>(https://drive.google.com/u/0/uc?id=1-ITaMieQqLFg
 Pet2023_BestBackbone Model:<br>(https://drive.google.com/u/8/uc?id=17IxKOmBRiKjbzkMw5IX59DQcMVyxnBwl&export=download)<br>
 Pet2023_BestHeader Model:<br>(https://drive.google.com/u/8/uc?id=1--YMiueKiduYO5Njp_sE3cHUTzqE2hrF&export=download)<br>
 
-Put `ResNet100 Pretrained Model`, `Pet2023_BestBackbone Model`, `Pet2023_BestHeader Model` into `./source` folder,<br>
-Put `First Yolov7 Model` into `./yolov7_bbox_landmarks/weights`,<br>
-Put `Second Yolov7 Model` into `./yolov7_bbox/weights`,
+Put `res_mag_All_Data_del2img_Extra2_replaced_best.pth`, `Pet2023_BestBackbone.pth`, `Pet2023_BestHeader.pth` into `./source` folder,<br>
+Put the first Yolov7 Model `yolov7-pet-face.pt` into `./yolov7_bbox_landmarks/weights`,<br>
+Put the second Yolov7 Model `yolov7x-pet-face.pt` into `./yolov7_bbox/weights`,
 
 ## Train the new model
 Here are two pretrained backbone provided, after downloading these models and put them in the "source" folder
-- ms1mv3_arcface_r100_fp16_backbone.pth (https://drive.google.com/u/0/uc?id=1MHjiSy3Snvqptf0K71sr2IzXGjC4Lbcq&export=download providied by deepinsight)
+- ms1mv3_arcface_r100_fp16_backbone.pth <br>(https://drive.google.com/u/0/uc?id=1MHjiSy3Snvqptf0K71sr2IzXGjC4Lbcq&export=download providied by deepinsight)
 - Pet2023_BestBackbone.pth (the best backbone in this study, download in the Download Pretrained model section)
 - Pet2023_BestHeader.pth (the best header in this study, download in the Download Pretrained model section)
 
