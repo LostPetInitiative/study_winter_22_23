@@ -96,7 +96,7 @@ cat_dog_class_csv/
 Load the model and run the test.py, and pass the backbone to the test.py, the backbone will be found in `source` folder, and the `test.py` will generate a `submit.tsv` file in eval.
 ```
 cd eval  # the folder path
-python test.py --backbone res_mag_del2img_ExtraIG_replaced_backbone.pth
+python test.py --backbone res_mag_All_Data_del2img_Extra2_replaced_best.pth
 ```
 
 After generating the `submit.tsv`, register on (http://92.63.96.33/c/_lostpets_v3_1/description), download the `compai__lostpets_v3_1.py`, put it into the `eval` folder
