@@ -45,7 +45,7 @@ Here are two pretrained backbones are provided, after downloading those weights,
 
 Train the model from the srcatch, use the `ms1mv3_arcface_r100_fp16_backbone.pth` backbone as pre-trained model, and input --backbone ms1mv3_arcface_r100_fp16_backbone.pth
 ```
-cd pet2023/myrun  # the folder path
+cd myrun
 python train.py --exp_name exp1 --backbone ms1mv3_arcface_r100_fp16_backbone.pth
 ```
 
@@ -54,7 +54,7 @@ For continue the previous training, input --exp_name and --continue_train,<br>
 the default backbone and header are `last_backbone.pth` and `last_header.pth`
 
 ```
-cd pet2023/myrun  # the folder path
+cd myrun
 python train.py --exp_name exp1 --continue_train
 ```
 
