@@ -121,7 +121,7 @@ python compai__lostpets_v3_1.py sumbit sumbit.tsv
 |Cat detection dataset | ~6.8k |Doesn’t contain, we labeled manually|6 landmarks, convert to 3 landmarks|[link](https://www.kaggle.com/datasets/crawford/cat-dataset)|
 |TsingHua Dog | ~6.2k |Keep the head bounding box|Doesn’t contain, we labeled manually|[link](https://cg.cs.tsinghua.edu.cn/ThuDogs/)|
 |Dogs vs. Cats | ~1k |Keep the head bounding box|Doesn’t contain, we labeled manually|[link](https://www.kaggle.com/c/dogs-vs-cats)|
-|Total | 15k | - | - | [link](https://zenodo.org/record/7604865#.Y96vv3ZBxPY)|
+|Total | 15k | contains | contains | [link](https://zenodo.org/record/7604865#.Y96vv3ZBxPY)|
 
 Pet face detection dataset-1 contains 15k images, all images are included both bounding boxes and three points landmarks (two eyes and nose).
 
