@@ -25,7 +25,7 @@ List of the datasets:
 All3img_ExtraIG_train: <br>(https://zenodo.org/record/7606233#.Y9-GNHZBxD8)<br>
 All3img_ExtraIG_val: <br>(https://zenodo.org/record/7606233#.Y9-GNHZBxD8)<br>
 test_alignment.zip: <br>(https://zenodo.org/record/7606233#.Y9-GNHZBxD8))<br>
-Pet_face_detection_dataset1[description](#pet-face-detection-dataset-1): <br>(https://zenodo.org/record/7604865#.Y96vv3ZBxPY)<br>
+Pet_face_detection_dataset1: <br>(https://zenodo.org/record/7604865#.Y96vv3ZBxPY)<br>
 Pet_face_detection_dataset2: <br>(https://zenodo.org/record/7606080#.Y98jXnZBxPY)<br>
 
 - After downloading `All3img_ExtraIG_train.zip`, `All3img_ExtraIG_val.zip`, and `test_alignment.zip` unzip them into `datasets` folder. Those two dataset for training the pet face recognition model.<br>
@@ -114,15 +114,18 @@ python compai__lostpets_v3_1.py sumbit sumbit.tsv
 ```
 
 ## Yolov7 Pet face detectors
-### Train the first Yolov7 pet face detector
-#### Pet face detection dataset-1 description
+### Pet face detection dataset-1 description
 | Source dataset | Sampled number of images | bboxes? | landmarks? | source link | 
 | :----: | :--------: | :--------: | :--------: | :----: |
 |AnimalWeb | ~1k |Doesn’t contain, we labeled manually|9 landmarks, convert to 3 landmarks|[link](https://fdmaproject.wordpress.com/author/fdmaproject/)|
 |Cat detection dataset | ~6.8k |Doesn’t contain, we labeled manually|6 landmarks, convert to 3 landmarks|[link](https://www.kaggle.com/datasets/crawford/cat-dataset)|
 |TsingHua Dog | ~6.2k |Keep the head bounding box|Doesn’t contain, we labeled manually|[link](https://cg.cs.tsinghua.edu.cn/ThuDogs/)|
 |Dogs vs. Cats | ~1k |Keep the head bounding box|Doesn’t contain, we labeled manually|[link](https://www.kaggle.com/c/dogs-vs-cats)|
+|Total | 15k | - | - | [link](https://zenodo.org/record/7604865#.Y96vv3ZBxPY)|
 
+Pet face detection dataset-1 contains 15k images, all images are included both bounding boxes and three points landmarks (two eyes and nose).
+
+### Train the first Yolov7 pet face detector
 The first yolov7 detects both 3 landmarks (two eyes and nose) and bboxes, for training the first yolov7 detector, download the `pet_face_detection_dataset_1`, and unzip in the path: `./yolov7_bbox_landmarks/`
 
 Download the initial weights file: (https://zenodo.org/record/7607110#.Y9-EAXZBxPZ), and put it in the path `weights/yolov7-face.pt`.
@@ -153,6 +156,9 @@ python test.py --data data/pet_test_kashtanka.yaml --kpt-label 3 --img 640 --bat
 
 
 ### Train the second Yolov7 pet face detector
+### Pet face detecion dataset-2
+This dataset is combined [TsingHua dog dataset](https://cg.cs.tsinghua.edu.cn/ThuDogs/) and [Oxford-IIIT PET dataset](https://www.robots.ox.ac.uk/~vgg/data/pets/), converted and normalized their coordinates into xywh format and turned their classes into one class (pet face).
+
 The second only detects the bboxes, for training the second yolov7 detector, download the `pet_face_detection_dataset_2`, and unzip in the path: `./yolov7_bbox/data`. And download the initial weights from (https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7x.pt), and put it into `./yolov7_bbox/weights/yolov7x.pt`
 
 
