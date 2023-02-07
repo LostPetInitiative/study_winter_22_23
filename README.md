@@ -25,7 +25,7 @@ List of the datasets:
 All3img_ExtraIG_train: <br>(https://zenodo.org/record/7606233#.Y9-GNHZBxD8)<br>
 All3img_ExtraIG_val: <br>(https://zenodo.org/record/7606233#.Y9-GNHZBxD8)<br>
 test_alignment.zip: <br>(https://zenodo.org/record/7606233#.Y9-GNHZBxD8))<br>
-[Pet_face_detection_dataset1](https://github.com/LostPetInitiative/study_winter_22_23#pet-face-detection-dataset-1): <br>(https://zenodo.org/record/7604865#.Y96vv3ZBxPY)<br>
+Pet_face_detection_dataset1[description](#pet-face-detection-dataset-1): <br>(https://zenodo.org/record/7604865#.Y96vv3ZBxPY)<br>
 Pet_face_detection_dataset2: <br>(https://zenodo.org/record/7606080#.Y98jXnZBxPY)<br>
 
 - After downloading `All3img_ExtraIG_train.zip`, `All3img_ExtraIG_val.zip`, and `test_alignment.zip` unzip them into `datasets` folder. Those two dataset for training the pet face recognition model.<br>
