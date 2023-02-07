@@ -114,6 +114,11 @@ python compai__lostpets_v3_1.py sumbit sumbit.tsv
 ```
 
 ## Yolov7 Pet face detectors
+### Pet face detection dataset-1
+| Source dataset | Sampled number of images | bboxes? | landmarks? | source link | 
+| ------- | ---------- | ---------- | ---------- | ---------- |
+|AnimalWeb |1k |Doesn’t contain, manually labeled|9 landmarks, convert to 3 landmarks|[link](https://fdmaproject.wordpress.com/author/fdmaproject/)|
+
 ### Train the first Yolov7 pet face detector
 The first yolov7 detects both 3 landmarks (two eyes and nose) and bboxes, for training the first yolov7 detector, download the `pet_face_detection_dataset_1`, and unzip in the path: `./yolov7_bbox_landmarks/`
 
