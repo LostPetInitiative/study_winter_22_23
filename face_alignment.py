@@ -317,7 +317,7 @@ def process_face_alignment(opt):
     for source in list(kpts_dict.keys()):
         img = cv2.imread(source)
 
-        img_name = source.split('\\')[-1]
+        img_name = source.split('\\')[-1] if '\\' in source else source.split('/')[-1]
         src_pts_list = kpts_dict[source]['kpts']
         bbox_list = kpts_dict[source]['bbox']
         bbox_list2 = bbox_dict[source]['bbox']
