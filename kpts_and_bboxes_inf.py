@@ -109,13 +109,16 @@ if __name__ == '__main__':
     else: # folder of folder of images
         for folder in os.listdir(source):
             for img_path in os.listdir(f"{source}/{folder}"):
-                path_name, bbox, src_pts, conf = detect(opt=opt, source=f"{source}/{folder}/{img_path}")
-                data[path_name] = {
-                    'bbox': [i.tolist() for i in bbox],
-                    'kpts': [i.tolist() for i in src_pts],
-                    'folder': folder,
-                    'conf': conf
-                    }
+                try:
+                    path_name, bbox, src_pts, conf = detect(opt=opt, source=f"{source}/{folder}/{img_path}")
+                    data[path_name] = {
+                        'bbox': [i.tolist() for i in bbox],
+                        'kpts': [i.tolist() for i in src_pts],
+                        'folder': folder,
+                        'conf': conf
+                        }
+                except:
+                    print(f"fail on: {img_path}")
         
     save_path = f"{opt.name}_kpt.json"
     if os.path.exists(save_path):
